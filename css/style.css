@@ -1,0 +1,716 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f6f8;
+
+    color: #333;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: #1f2937;
+
+    color: white;
+}
+
+
+.header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.header p {
+
+    font-size: 16px;
+
+}
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    background: white;
+
+    border-bottom:
+        1px solid #ddd;
+
+}
+
+
+.nav-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    padding: 15px;
+}
+
+
+.nav-container a {
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: bold;
+
+}
+
+
+.nav-container a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+
+    background: white;
+
+    padding: 30px;
+
+    margin: 30px 0;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.section-header {
+
+    margin-bottom: 25px;
+}
+
+
+.section-header h2 {
+
+    margin-bottom: 5px;
+
+    font-size: 24px;
+}
+
+
+.section-header p {
+
+    color: #777;
+}
+
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group label {
+
+    font-weight: bold;
+
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border:
+        1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: #555;
+
+}
+
+
+
+/* =========================
+   GENDER
+========================= */
+
+.gender-group {
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 10px 0;
+}
+
+
+.radio-label {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-weight: normal !important;
+}
+
+
+.radio-label input {
+
+    width: auto;
+}
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.form-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+.btn {
+
+    border: none;
+
+    padding: 11px 20px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.2s;
+}
+
+
+.btn:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+.primary-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+.secondary-btn {
+
+    background: #6b7280;
+
+    color: white;
+
+}
+
+
+.edit-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+}
+
+
+.delete-btn {
+
+    background: #dc2626;
+
+    color: white;
+
+}
+
+
+.hidden {
+
+    display: none;
+}
+
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+.message.success {
+
+    color: #15803d;
+}
+
+
+.message.error {
+
+    color: #dc2626;
+}
+
+
+
+/* =========================
+   SEARCH + FILTER
+========================= */
+
+.search-filter-container {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr;
+
+    gap: 20px;
+}
+
+
+.search-box,
+.filter-box {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.search-box label,
+.filter-box label {
+
+    font-weight: bold;
+}
+
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.statistics-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.stat-card {
+
+    padding: 25px;
+
+    text-align: center;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 8px;
+
+    background: #fafafa;
+}
+
+
+.stat-icon {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+.stat-card h3 {
+
+    font-size: 16px;
+
+    color: #666;
+
+}
+
+
+.stat-card p {
+
+    margin-top: 8px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================
+   EMPLOYEE HEADER
+========================= */
+
+.employee-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.employee-count {
+
+    background: #e5e7eb;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================
+   EMPLOYEE CARDS
+========================= */
+
+.employee-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.employee-card {
+
+    padding: 22px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 8px;
+
+    background: white;
+}
+
+
+.employee-card h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+
+.employee-card p {
+
+    margin-bottom: 8px;
+
+    color: #555;
+}
+
+
+.employee-card strong {
+
+    color: #333;
+}
+
+
+.card-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+.card-buttons .btn {
+
+    flex: 1;
+}
+
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 50px;
+
+    color: #777;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+    background: #1f2937;
+
+    color: white;
+}
+
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .employee-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .statistics-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .search-filter-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .employee-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .statistics-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nav-container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+
+    }
+
+
+    .employee-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    .section {
+
+        padding: 20px;
+
+    }
+
+
+    .container {
+
+        width: 95%;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .gender-group {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+
+    .form-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .form-actions .btn {
+
+        width: 100%;
+
+    }
+
+}
