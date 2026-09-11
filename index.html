@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="header-content">
+
+        <h1>Employee Management System</h1>
+
+        <p>
+            Manage employee information easily
+        </p>
+
+    </div>
+
+</header>
+
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#employee-form">
+            Add Employee
+        </a>
+
+        <a href="#statistics">
+            Statistics
+        </a>
+
+        <a href="#employees">
+            Employees
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="container">
+
+
+    <!-- =========================
+         EMPLOYEE FORM
+    ========================== -->
+
+    <section id="employee-form"
+             class="section">
+
+        <div class="section-header">
+
+            <h2 id="formTitle">
+                Add Employee
+            </h2>
+
+            <p>
+                Enter employee details below
+            </p>
+
+        </div>
+
+
+        <form id="employeeForm">
+
+            <div class="form-grid">
+
+
+                <!-- Employee ID -->
+
+                <div class="form-group">
+
+                    <label for="employeeId">
+                        Employee ID
+                    </label>
+
+                    <input
+                            type="text"
+                            id="employeeId"
+                            placeholder="EMP101"
+                            maxlength="20"
+                            required>
+
+                </div>
+
+
+                <!-- Employee Name -->
+
+                <div class="form-group">
+
+                    <label for="employeeName">
+                        Employee Name
+                    </label>
+
+                    <input
+                            type="text"
+                            id="employeeName"
+                            placeholder="Rahul Kumar"
+                            maxlength="100"
+                            required>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                            type="email"
+                            id="email"
+                            placeholder="rahul@gmail.com"
+                            required>
+
+                </div>
+
+
+                <!-- Department -->
+
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <select id="department"
+                            required>
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="IT">
+                            IT
+                        </option>
+
+                        <option value="HR">
+                            HR
+                        </option>
+
+                        <option value="Finance">
+                            Finance
+                        </option>
+
+                        <option value="Marketing">
+                            Marketing
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Salary -->
+
+                <div class="form-group">
+
+                    <label for="salary">
+                        Salary
+                    </label>
+
+                    <input
+                            type="number"
+                            id="salary"
+                            placeholder="50000"
+                            min="1"
+                            required>
+
+                </div>
+
+
+                <!-- Gender -->
+
+                <div class="form-group">
+
+                    <label>
+                        Gender
+                    </label>
+
+                    <div class="gender-group">
+
+                        <label class="radio-label">
+
+                            <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Male"
+                                    required>
+
+                            Male
+
+                        </label>
+
+
+                        <label class="radio-label">
+
+                            <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Female">
+
+                            Female
+
+                        </label>
+
+
+                        <label class="radio-label">
+
+                            <input
+                                    type="radio"
+                                    name="gender"
+                                    value="Other">
+
+                            Other
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Joining Date -->
+
+                <div class="form-group">
+
+                    <label for="joiningDate">
+                        Joining Date
+                    </label>
+
+                    <input
+                            type="date"
+                            id="joiningDate"
+                            required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-actions">
+
+                <button
+                        type="submit"
+                        id="submitBtn"
+                        class="btn primary-btn">
+
+                    Add Employee
+
+                </button>
+
+
+                <button
+                        type="button"
+                        id="cancelBtn"
+                        class="btn secondary-btn hidden">
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+
+            <p id="formMessage"
+               class="message">
+            </p>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =========================
+         SEARCH AND FILTER
+    ========================== -->
+
+    <section class="section">
+
+        <div class="section-header">
+
+            <h2>Search & Filter</h2>
+
+            <p>
+                Find employees quickly
+            </p>
+
+        </div>
+
+
+        <div class="search-filter-container">
+
+
+            <div class="search-box">
+
+                <label for="searchInput">
+                    Search
+                </label>
+
+                <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search by ID, name or department">
+
+            </div>
+
+
+            <div class="filter-box">
+
+                <label for="departmentFilter">
+                    Department
+                </label>
+
+                <select id="departmentFilter">
+
+                    <option value="All">
+                        All Departments
+                    </option>
+
+                    <option value="IT">
+                        IT
+                    </option>
+
+                    <option value="HR">
+                        HR
+                    </option>
+
+                    <option value="Finance">
+                        Finance
+                    </option>
+
+                    <option value="Marketing">
+                        Marketing
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         STATISTICS
+    ========================== -->
+
+    <section id="statistics"
+             class="section">
+
+        <div class="section-header">
+
+            <h2>Employee Statistics</h2>
+
+            <p>
+                Overview of employee salary information
+            </p>
+
+        </div>
+
+
+        <div class="statistics-container">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    👥
+                </div>
+
+                <h3>Total Employees</h3>
+
+                <p id="totalEmployees">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    💰
+                </div>
+
+                <h3>Average Salary</h3>
+
+                <p id="averageSalary">
+                    ₹0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📈
+                </div>
+
+                <h3>Highest Salary</h3>
+
+                <p id="highestSalary">
+                    ₹0
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📉
+                </div>
+
+                <h3>Lowest Salary</h3>
+
+                <p id="lowestSalary">
+                    ₹0
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EMPLOYEE LIST
+    ========================== -->
+
+    <section id="employees"
+             class="section">
+
+        <div class="section-header employee-header">
+
+            <div>
+
+                <h2>Employees</h2>
+
+                <p>
+                    Employee records
+                </p>
+
+            </div>
+
+
+            <span id="employeeCount"
+                  class="employee-count">
+
+                0 Employees
+
+            </span>
+
+        </div>
+
+
+        <div id="employeeContainer"
+             class="employee-container">
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<footer class="footer">
+
+    <p>
+        Employee Management System © 2026
+    </p>
+
+</footer>
+
+
+
+<script type="module"
+        src="js/app.js">
+</script>
+
+</body>
+
+</html>
